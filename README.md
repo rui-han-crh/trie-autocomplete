@@ -59,6 +59,7 @@ For example, consider the byte sequences for `banana`, `balloon` and `ballot`:
 | ballot | 0x62 0x61 0x6c 0x6c 0x6f 0x74 |
 
 Observe the similarity in some ordered positions of some byte sequences. We are able to represent these three words in as a trie:
+
 ![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/104a46ef-f866-4b63-b554-6c08477b6650)
 
 Similarly, a new word may extend the trie from any byte as along as it has the same prefix from the parent that it is a child of to the root of the tree.
