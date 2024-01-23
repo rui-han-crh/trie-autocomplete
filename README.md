@@ -60,7 +60,7 @@ For example, consider the byte sequences for `banana`, `balloon` and `ballot`:
 
 Observe the similarity in some ordered positions of these byte sequences. We are able to represent these three words as a trie:
 
-![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/104a46ef-f866-4b63-b554-6c08477b6650)
+![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/a55296b9-fd76-4037-ab22-77714828aad5)
 
 Similarly, a new word may extend the trie from any byte as along as it has the same prefix from the parent that it is a child of to the root of the tree.
 
@@ -70,8 +70,7 @@ To mark that a sequence of bytes is completed, the _null terminator_ is used. Th
 
 In the above example, suppose the word `Ball` exists as well. With null terminators, the trie is able to represent exactly where valid sequences end.
 
-![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/cc5c7f4c-67b4-41cb-9806-3b17e137c8c4)
-
+![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/8fb962ee-c4e0-4fbd-b7f2-1a2f0fc0309b)
 
 ### Rational for Choosing Byte Sequence over Character Sequence
 ASCII tries can be represented with character sequences, where keys are likely to be alphanumeric with special characters. However, extended corpuses may include characters outside of the standard ASCII range, such as Chinese characters and other Unicode characters. These characters are considered multibyte characters extending beyond 1 byte long. 
