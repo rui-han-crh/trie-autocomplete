@@ -49,7 +49,7 @@ void Node::addByteSequence(const std::vector<unsigned char>& byteSequence, unsig
 }
 
 // Get all words with a given prefix.
-std::vector<std::string> Node::getByteSequence(const std::vector<unsigned char>& prefix, unsigned int startIndex) {
+std::vector<std::string> Node::getByteSequence(const std::vector<unsigned char>& prefix, unsigned int startIndex, unsigned int num_autocomplete) {
     std::vector<std::string> words = std::vector<std::string>();
 
     if (startIndex == prefix.size()) {
@@ -58,7 +58,7 @@ std::vector<std::string> Node::getByteSequence(const std::vector<unsigned char>&
 
         q.push(std::make_pair(this, prefix));
 
-        while (!q.empty() && words.size() < 10) {
+        while (!q.empty() && words.size() < num_autocomplete) {
             std::pair<Node*, std::vector<unsigned char>> p = q.front();
             q.pop();
 
@@ -94,5 +94,5 @@ std::vector<std::string> Node::getByteSequence(const std::vector<unsigned char>&
     }
 
     // Get all words from the child.
-    return children[nextByte]->getByteSequence(prefix, startIndex + 1);
+    return children[nextByte]->getByteSequence(prefix, startIndex + 1, num_autocomplete);
 }

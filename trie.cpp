@@ -21,12 +21,12 @@ void Trie::addByteSequence(const std::vector<unsigned char>& byteSequence) {
 }
 
 // Get all words with a given prefix and within a given distance.
-std::vector<std::string> Trie::getByteSequence(const std::vector<unsigned char>& prefix) {
+std::vector<std::string> Trie::getByteSequence(const std::vector<unsigned char>& prefix, unsigned int num_autocomplete) {
     int firstByte = prefix[0];
 
     if (roots[firstByte] == nullptr) {
         return std::vector<std::string>();
     }
 
-    return roots[firstByte]->getByteSequence(prefix, 1);
+    return roots[firstByte]->getByteSequence(prefix, 1, num_autocomplete);
 }

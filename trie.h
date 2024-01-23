@@ -13,7 +13,7 @@ class Trie {
     public:
         Trie();
         void addByteSequence(const std::vector<unsigned char>& byteSequence);
-        std::vector<std::string> getByteSequence(const std::vector<unsigned char>& byteSequence);
+        std::vector<std::string> getByteSequence(const std::vector<unsigned char>& byteSequence, unsigned int num_autocomplete);
 };
 
 #endif

@@ -14,10 +14,21 @@ const std::string CORPUS = "corpus";
 
 Trie* trie;
 
-void readFromConsole();
+void readFromConsole(unsigned int num_autocomplete);
 int readFile(const std::filesystem::path filePath);
 
-int main() {
+int main(int argc, char** argv) {
+    unsigned int num_autocomplete = 10;
+
+    if (argc > 1) {
+        try {
+            num_autocomplete = std::stoi(argv[1]);
+        } catch (std::invalid_argument& e) {
+            std::cout << "Invalid argument: " << argv[1] << std::endl;
+            return 1;
+        }
+    }
+    
     trie = new Trie();
 
     std::cout << "Building trie..." << std::endl;
@@ -38,7 +49,7 @@ int main() {
 
     std::cout << "\tTime taken: " << std::fixed << std::setprecision(2) << timeTaken.count() << " seconds" << std::endl;
 
-    readFromConsole();
+    readFromConsole(num_autocomplete);
 
     return 0;
 }
@@ -84,7 +95,7 @@ int readFile(const std::filesystem::path filePath) {
 }
 
 // Read from the console.
-void readFromConsole() {
+void readFromConsole(unsigned int num_autocomplete) {
     // Set up a locale for converting multibyte characters to byte sequences.
     std::locale utf8_locale(std::locale(), new std::codecvt_utf8<char32_t>);
     std::cin.imbue(utf8_locale);
@@ -106,7 +117,7 @@ void readFromConsole() {
         }
 
         // Get the words.
-        std::vector<std::string> words = trie->getByteSequence(bytes);
+        std::vector<std::string> words = trie->getByteSequence(bytes, num_autocomplete);
 
         // Print the prefix.
         std::cout << "> " << line << std::endl;

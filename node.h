@@ -14,7 +14,7 @@ class Node{
         char getByte();
         Node* getChild(char b);
         void addByteSequence(const std::vector<unsigned char>& byteSequence, unsigned int startIndex);
-        std::vector<std::string> getByteSequence(const std::vector<unsigned char>& prefix, unsigned int startIndex);
+        std::vector<std::string> getByteSequence(const std::vector<unsigned char>& prefix, unsigned int startIndex, unsigned int num_autocomplete);
 };
 
 #endif
