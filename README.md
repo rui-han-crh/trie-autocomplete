@@ -24,7 +24,7 @@ Upon starting the program, the program reads and parses all `.txt` files in the 
 
 This will take some time, usually a few seconds. When the compilation is complete, the console prompts any text input:
 
-![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/135ea5ed-27f7-4bfe-833b-6066933c7ea7)
+![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/0913ef60-be0b-45a0-9a3e-53d45989cace)
 
 After the `>`, you may input any string of character. Pressing enter will allow the program to autocomplete your text. The first `k` (see [Running the Program](#running-the-program) for parameter description) nearest valid phrases will be autocompleted.
 
