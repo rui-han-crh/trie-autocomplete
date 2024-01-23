@@ -35,7 +35,7 @@ Additionally, non-ASCII characters are also accepted:
 ![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/00254961-e8aa-4b74-974c-8e66c1a1d207)
 
 ## Expanding the Vocabulary
-The knowledge base of the autocompletion program comes from all line separated words in each text file in the `./corpus` folder. To add your own word, simply modify an existing text file, or add additional files with words that are space separated.
+The knowledge base of the autocompletion program comes from all line separated words in each text file in the `./corpus` folder. To add your own words, simply modify an existing text file, or add additional files with words that are space separated.
 
 Ensure these files end with the extensions `.txt`.
 
