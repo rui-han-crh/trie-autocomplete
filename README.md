@@ -26,7 +26,7 @@ This will take some time, usually a few seconds. When the compilation is complet
 
 ![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/0913ef60-be0b-45a0-9a3e-53d45989cace)
 
-After the `>`, you may input any string of character. Pressing enter will allow the program to autocomplete your text. The first `k` (see [Running the Program](#running-the-program) for parameter description) nearest valid phrases will be autocompleted.
+After the `>`, you may input any string of characters. Pressing enter will allow the program to autocomplete your text. The first `k` (see [Running the Program](#running-the-program) for parameter description) nearest valid phrases will be autocompleted.
 
 ![image](https://github.com/rui-han-crh/trie-autocomplete/assets/15359033/2ca009a9-54c7-4c43-b36c-8115dee8b8b6)
 
