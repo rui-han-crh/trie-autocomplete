@@ -49,7 +49,7 @@ Files are specifies in the `corpus` directory, containing `.txt` files with line
 
 For each (potentially multibyte-character) string, it is transformed into UTF-8 to maintain byte consistency.
 
-The trie stores byte sequences. A transition from any parent node to a child node indicts immediate succession of the parent node's byte with the child node's byte.
+The trie stores byte sequences. A transition from any parent node to a child node indicates the immediate succession of the parent node's byte with the child node's byte.
 
 For example, consider the byte sequences for `banana`, `balloon` and `ballot`:
 | English Word | Byte Sequence |
